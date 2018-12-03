@@ -95,26 +95,6 @@ stages:
         sleep 15
       done
 
-      if [ ${CF_REGION} == "AU" ]; then
-        echo -e "${crossbones}${Yellow}    Object Storage service not available in this region${no_color}"
-      else
-        echo -e "${tools}${Cyan}  Creating Openstack Swift Object Storage Service Instance${no_color}"
-        t=0
-        until [ $t -ge 5 ]
-        do
-          cf create-service Object-Storage standard myObjectStorage > /dev/null 2>&1 && break
-          t=$[$t+1]
-          sleep 15
-        done
-        while :
-        do
-          status=$(cf s | grep myObjectStorage | awk -F" " '{print $5, $6}')
-          if [[ "$status" == *"succeeded"* ]]
-          then
-            break
-          fi
-        done
-      fi
       sleep 3m
   - name: DeliverPresent
     type: deployer

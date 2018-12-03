@@ -1,8 +1,5 @@
 ---
 declared-services:
-  myObjectStorage:
-    label: Object-Storage
-    plan: Standard
   myComposeMySQL:
     label: compose-for-mysql
     plan: Standard

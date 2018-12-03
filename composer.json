@@ -2,10 +2,6 @@
     "repositories": [
         {
           "type": "vcs",
-          "url": "https://github.com/ibmjstart/wp-bluemix-objectstorage.git"
-        },
-        {
-          "type": "vcs",
           "url": "https://github.com/ibmjstart/wp-bluemix-config.git"
         },
         {
@@ -41,7 +37,6 @@
     "require": {
         "ext-gd"                                      : "*",
         "johnpbloch/wordpress"                        : "*",
-        "ibmjstart/wp-bluemix-objectstorage"          : "~2.1.1",
         "ibmjstart/wp-bluemix-config"                 : "dev-master",
         "wpackagist-plugin/stops-core-theme-and-plugin-updates": "*",
         "wpackagist-plugin/sendgrid-email-delivery-simplified": "*",
